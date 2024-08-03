@@ -158,7 +158,7 @@ GetOptions(
 ### Retrieve and parse the input
 ##
 #
-my $input = `targetcli ls`;
+my $input = `/usr/bin/targetcli ls`;
 
 # Match the "backstores" paragraph using a regular expression
 if ($input =~ /(^\ \ o- backstores.+?)\n(.+?)(^\ \ o)/ms) {
