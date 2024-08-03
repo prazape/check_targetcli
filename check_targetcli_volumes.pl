@@ -1,7 +1,7 @@
 #! /usr/bin/perl
 # vim: tabstop=2 shiftwidth=2 expandtab 
 
-# Author: Petr Prazak prazape@gmail.com
+# Author: Petr Prazak <prazape@gmail.com>
 # Date: 2024-08-03
 # Description: This script checks the available backstores and provides warnings
 # and critical alerts based on the defined thresholds.
