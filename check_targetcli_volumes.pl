@@ -195,7 +195,7 @@ if ($input =~ /(^\ \ o- backstores.+?)\n(.+?)(^\ \ o)/ms) {
       print_message(3, "  Storage name: $1\n");
     }
     print_message(2, "\n");
-    print_message(2, "  Details: $storage_details\n");
+    print_message(4, "  Details: $storage_details\n");
   }
 }
 else {
@@ -208,7 +208,7 @@ my $total_count = 0;
 foreach my $count (values %backstores_counts) {
   $total_count += $count;
 }
-print_message(2, "Total datastore count: $total_count");
+print_message(2, "Total datastore count: $total_count\n");
 
 if ($criticals{"total"} > $total_count) {
   print_message(2, " -> CRITICAL: Less than expected ($criticals{'total'})");
@@ -233,7 +233,7 @@ elsif ($return_code == $return_codes{"warning"}) {
   print_message(1, "backstores\n");
 }
 elsif ($return_code == $return_codes{"ok"}) {
-  print_message(1, $return_codes_to_strings{$return_code} . " Found $total_count backstore" . ($total_count > 1 ? "s" : ""));
+  print_message(1, $return_codes_to_strings{$return_code} . " Found $total_count backstore" . ($total_count > 1 ? "s" : "")."\n");
 }
 else {
   print_message(1, $return_codes_to_strings{4});
